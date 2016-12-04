@@ -1,0 +1,111 @@
+$calculator: #345677;
+$background: #ccc;
+$display: #dadada;
+$text: lighten($calculator, 10%);
+$lightButton: #dedede;
+$darkButton: #c5c5c5;
+
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  background: url('../images/strange_bullseyes.png');
+  margin: 0;
+  color: white;
+}
+
+span.json {
+  position: fixed;
+  left:0;
+  top: 0;
+  white-space: pre;
+  font-family: monospace;
+}
+
+.wrapper {
+  background: rgba($calculator, 0.4);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#calculator {
+  position: relative;
+  width: 300px;
+  height: 440px;
+  background: $calculator;
+  border-radius: 30px;
+  padding: 30px 20px 30px 30px;
+}
+
+.display {
+  width: 290px;
+  height: 50px;
+  float: left;
+  background: $display;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-family: 'Oxygen Mono', monospace;
+  color: darken($text, 10%);
+  text-align: right;
+  font-size: 28px;
+  margin: 8px 8px 0px 8px;
+}
+
+.btn {
+  cursor: pointer;
+  float: left;
+  width: 65px;
+  height: 65px;
+  background: $lightButton;
+  font-size: 36px;
+  color: $text;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 10px;
+  span {
+    position: relative;
+    top: 12px;
+  }
+}
+
+.btn.decimal span,
+.btn.multiply span {
+  top: 8px;
+}
+
+.btn.back span,
+.btn.clear span {
+  font-size: 34px;
+}
+
+.btn.minus span {
+  top: 12px;
+}
+
+.btn.zero {
+  width: 140px;
+}
+
+.btn.clear,
+.btn.percent,
+.btn.back,
+.btn.divide,
+.btn.multiply,
+.btn.minus,
+.btn.plus,
+.btn.equals {
+  background: $darkButton;
+  color: darken($text, 5%);
+}
+
+.btn:active {
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.4);
+  }
